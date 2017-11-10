@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://source.unsplash.com/random');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.travelandleisure.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1600x1000%2Fpublic%2Fgandt0715.jpg%3Fitok%3DQkWjoO0x&w=1600&q=70');">
   <div class="banner-content">
     <h1>Cocktails</h1>
     <p>Make some cocktails today</p>
@@ -10,7 +10,7 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%=cl_image_path cocktail.photo? ? cocktail.photo : "rehkkgg9b7exwkrk1a63", height: 300, width: 400, crop: :fill %>');">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
             <% cocktail.doses.each do |dose| %>
@@ -28,4 +28,3 @@
   </div>
 </div>
 
-<%= cl_image_tag("rehkkgg9b7exwkrk1a63", width: 400, height: 300, crop: :fill) %>

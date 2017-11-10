@@ -21,6 +21,8 @@ p "seeding ingredients"
   ingredients = Ingredient.create!(name: Faker::Food.spice)
   puts "#{ingredients.name} created"
 end
+
+
 p "ingredients have been created"
 
 # p "seeding doses"
