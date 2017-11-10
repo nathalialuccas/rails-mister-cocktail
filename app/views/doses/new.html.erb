@@ -1,0 +1,14 @@
+
+
+<div class>
+  <div class="container">
+    <div class="col-sm-offset-4 col-sm-4" >
+      <h1>Ingredients</h1>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: Ingredient.all%>
+      <%= f.submit "create", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+</div>
